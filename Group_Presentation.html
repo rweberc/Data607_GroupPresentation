@@ -99,18 +99,32 @@
 
 <slide class=""><hgroup><h2>What is the most important data science skill?</h2></hgroup><article  id="what-is-the-most-important-data-science-skill">
 
-<p>Two approaches: 1 - - Look at relative frequency of a set of defined skills and educational requirements: - Python, SQL, R, etc. - BA, MA, PhD - Across three sites: - Job listing: Indeed, Zip Recruiter (search data+science) - Discussion forum: r/datascience (search data+science+skills)</p>
+<p><b>First approach:</b> - Look at relative frequency of a set of defined skills and educational requirements: - Python, SQL, R, etc. - BA, MA, PhD - Across three sites: - Job listing: Indeed, Zip Recruiter (search data+science) - Discussion forum: r/datascience (search data+science+skills)</p>
 
-<p>2 - - A more exploratory analysis on the corpuses derived from this web-scraping to determine unexpected keywords that are associated with this topic</p>
+</article></slide><slide class=""><hgroup><h2>What is the most important data science skill?</h2></hgroup><article  id="what-is-the-most-important-data-science-skill-1">
 
-<p>Overall, we were able to find results that told what felt like they have a reasonable summary answer to this question. Andy will discuss some overall conclusions and if there&#39;s time I&#39;ll discuss some limitations to our general approach.s.</p>
+<p><b>Second approach:</b> - A more exploratory analysis on the corpuses derived from this web-scraping to determine unexpected keywords that are associated with this topic</p>
 
-</article></slide><slide class=""><hgroup><h2>Suffixes</h2></hgroup><article  id="suffixes">
+<p>Andy will discuss some overall conclusions and if there&#39;s time I&#39;ll discuss some limitations to our general approach.s.</p>
+
+</article></slide><slide class=""><hgroup><h2>Limitations</h2></hgroup><article  id="limitations">
 
 <ul>
-<li><p>_all() - performs the function on all variables in a dataset</p></li>
-<li><p>_at() - performs the function on variables that meet a specified naming or positional criteria</p></li>
-<li><p>_if() - performs the function on columns that return TRUE based on a predicate statement</p></li>
+<li><p>In searching for single words &quot;SQL experience is not necessary&quot; will have same impact as &quot;SQL experience is necessary&quot;. Would need more robust natural language processing to disambiguating such cases. This is especially important in the forum discussions.</p></li>
+<li><p>Our job listing search gives each job listing the same weight. Perhaps we should weight listings from top companies differently than others. That is, perhaps Google/Amazon/Facebook/etc. may have a better specifications for the &quot;most important&quot; data science skills in their postings.</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Limitations</h2></hgroup><article  id="limitations-1">
+
+<ul>
+<li><p>Job listings may specify bare minimum requirements (say, BA/BS), when in fact less commonly listed requirements (perhaps, PhD) are actually most important.</p></li>
+<li><p>A search like ours could be more powerful, possibly, if there was a way to rate outcomes in association with the skills (such as which companies listings were associated with the greatest productivity/success, or something along these lines). Or, to weight the scraped results in some other manner. For instance, we looked at results from reddit posts, but did not rank according to individual upvote scores. Perhaps the most upvoted comments could be given more weight in the analysis that ones with lower scores or more downvotes.</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Limitations</h2></hgroup><article  id="limitations-2">
+
+<ul>
+<li>Timing: Even in subsequent searches on the same sites, we would some varying results. This gives some indication that there may be a temporal factor in the data (time of day or even season) where some words will show up more frequently. This is a very present-tense picture.</li>
 </ul></article></slide>
 
 
