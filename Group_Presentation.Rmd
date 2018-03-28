@@ -1,6 +1,7 @@
 ---
 title: "Data 607 - Group Presentation"
-author: "Ryan Weber"
+author: "Peter Lombardo, Sang Yoon (Andy), Vinicio Haro, Ryan Weber, Anjal Hussan,
+  Ashish Kumar"
 date: "March 28, 2018"
 output:
   ioslides_presentation
