@@ -1,0 +1,44 @@
+---
+title: "Dplyr suffix functions"
+author: "Ryan Weber"
+date: "March 7, 2018"
+output:
+  ioslides_presentation
+
+---
+```{r setup, include=FALSE}
+rm(list=ls())
+library(viridis)
+library(dplyr)
+knitr::opts_chunk$set(echo = TRUE, comment=NA)
+```
+
+## What is the most important data science skill?
+
+Two approaches:
+ 1 - 
+ - Look at relative frequency of a set of defined skills and educational requirements:
+   - Python, SQL, R, etc.
+   - BA, MA, PhD
+ - Across three sites:
+  - Job listing: Indeed, Zip Recruiter (search data+science)
+  - Discussion forum: r/datascience (search data+science+skills)
+  
+  2 - 
+  - A more exploratory analysis on the corpuses derived from this web-scraping to determine unexpected  keywords that are associated with this topic
+  
+  Overall, we were able to find results that told what felt like they have a reasonable summary answer to this question. Andy will discuss some overall conclusions and if there's time I'll discuss some limitations to our general approach.s.
+
+## Limitations
+
+ - In searching for single words "SQL experience is not necessary" will have same impact as "SQL experience is necessary".  Would need more robust natural language processing to disambiguating such cases.  This is especially important in the forum discussions.
+ 
+  - Our job listing search gives each job listing the same weight.  Perhaps we should weight listings from top companies differently than others.  That is, perhaps Google/Amazon/Facebook/etc. may have a better specifications for the "most important" data science skills in their postings.
+ 
+  - Job listings may specify bare minimum requirements (say, BA/BS), when in fact less commonly listed requirements (perhaps, PhD) are actually most important.  
+  
+   - A search like ours could be more powerful, possibly, if there was a way to rate outcomes in association with the skills (such as which companies listings were associated with the greatest productivity/success, or something along these lines).  Or, to weight the scraped results in some other manner.  For instance, we looked at results from reddit posts, but did not rank according to individual upvote scores.  Perhaps the most upvoted comments could be given more weight in the analysis that ones with lower scores or more downvotes.
+ 
+  - Timing: Even in subsequent searches on the same sites, we would some varying results.  This gives some indication that there may be a temporal factor in the data (time of day or even season) where some words will show up more frequently.  This is a very present-tense picture.
+
+
